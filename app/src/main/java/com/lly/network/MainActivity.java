@@ -21,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
         NetWorkManager.getDefault().registerNetWorkObserver(this);
     }
 
+    /**
+     * All("所有"),
+     * WIFI("Wifi"),
+     * MOBILE("手机"),
+     * NONE("无网络");
+     * @param netType
+     */
     @NetWork(netType = NetType.All)
     public void netWorkEvent(NetType netType) {
         tv_info.setText(String.format("网络类型：=%s", netType));
